@@ -1,0 +1,9 @@
+create table users
+(
+Name varchar2(25) not null,
+Email varchar2(50) primary key CONSTRAINT mailchck CHECK (REGEXP_LIKE (Email, '^(\S+)\@(\S+)\.(\S+)$')),
+Password varchar2(100) not null,
+Age number(5) not null,
+Gender varchar2(10) not null,
+City varchar2(30) not null,
+Movie varchar2(50) not null);
