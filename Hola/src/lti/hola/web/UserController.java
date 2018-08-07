@@ -19,7 +19,7 @@ public class UserController extends HttpServlet {
 			// request coming from home for login authentication
 			RegisterBean user = LoginController.authenticate(request);
 			if (user != null) { // Login sucessfull
-				response.sendRedirect("Profile.jsp");
+				response.sendRedirect("profile.jsp");
 			} else {
 				// login failed
 				response.sendRedirect("login.jsp");
@@ -53,6 +53,12 @@ public class UserController extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String referer = request.getHeader("referer");
+		
+		if(referer.contains("profile.jsp"))
+		{
+			RegisterBean user = LoginController.show(request);
+		}
 		// Delegating call to doGet method to perform common logic
 		doGet(request, response); // method chaining
 	}

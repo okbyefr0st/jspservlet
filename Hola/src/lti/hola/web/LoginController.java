@@ -48,4 +48,15 @@ public class LoginController {
 
 		
 	}
+
+	public static RegisterBean show(HttpServletRequest request) {
+		RegisterBean profile = new RegisterBean();
+		profile.setName(request.getParameter("name"));
+		profile.setEmail(request.getParameter("email"));
+		profile.setAge(Integer.parseInt(request.getParameter("age")));
+		profile.setGender(request.getParameter("gender"));
+		profile.setCity(request.getParameter("city"));
+		profile.setPhoto(request.getParameter("photo"));
+		return profile;
+	}
 }
