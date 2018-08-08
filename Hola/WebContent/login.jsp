@@ -9,6 +9,9 @@
 <body bgcolor=#ADD8E6 text=black>
 <jsp:include page="banner.jsp"/>
 	<h2>Login Page</h2>
+	<% if(request.getParameter("invalid")!= null) { %>
+	<font size="3" color = "red">Invalid Email ID / Password</font>
+	<% } %>
 	<form action="users.hola">
 		<b>EmailId :</B></br><input type="email" name="email"
 			placeholder="someone@xyz.in"></span> <br> <br> <B>

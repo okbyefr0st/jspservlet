@@ -23,6 +23,5 @@ public interface UserRepository {
 
 	boolean persist(RegisterBean register);
 
-	boolean show(RegisterBean register);
 
 }

@@ -83,7 +83,7 @@
 				<td><b>Photo :</B> <br></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="photo" placeholder="Enter your photo">
+				<td><input type="file" name="photo" placeholder="Enter your photo">
 					<br> <br></td>
 			</tr>
 
